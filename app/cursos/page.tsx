@@ -21,32 +21,48 @@ export default function CursosPage() {
                     </p>
                 </div>
                 <StaggerContainer className="grid grid-cols-1 gap-x-8 gap-y-16 lg:grid-cols-3">
-                    {courses.map((course) => (
-                        <StaggerItem key={course.id} className="flex flex-col items-start justify-between border rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group bg-white">
-                            <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-6 bg-gray-100">
-                                <img src={course.image} alt={course.title} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
-                                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-primary shadow-sm">
-                                    {course.category}
-                                </div>
+                    {courses.map((course, index) => (
+                        <StaggerItem
+                            key={course.id}
+                            className={`flex flex-col items-start justify-between border rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 group bg-white ${index === 0 ? 'lg:col-span-3 lg:grid lg:grid-cols-2 lg:gap-12' : ''}`}
+                        >
+                            <div className={`relative w-full rounded-xl overflow-hidden mb-6 bg-gray-100 ${index === 0 ? 'h-full aspect-auto lg:mb-0' : 'aspect-video'}`}>
+                                {index === 0 ? (
+                                    <iframe
+                                        className="w-full h-full aspect-video"
+                                        src="https://www.youtube.com/embed/placeholder"
+                                        title="Vídeo do Curso"
+                                        frameBorder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen
+                                    ></iframe>
+                                ) : (
+                                    <>
+                                        <img src={course.image} alt={course.title} className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500" />
+                                        <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-xs font-semibold text-primary shadow-sm">
+                                            {course.category}
+                                        </div>
+                                    </>
+                                )}
                             </div>
 
-                            <div className="w-full">
+                            <div className={`w-full ${index === 0 ? 'flex flex-col justify-center' : ''}`}>
                                 <div className="flex items-center gap-x-4 text-xs text-gray-500 mb-4">
                                     <span className="flex items-center gap-1"><Calendar className="w-3 h-3" /> {course.duration}</span>
                                     <span className="flex items-center gap-1"><MapPin className="w-3 h-3" /> {course.modality}</span>
                                 </div>
-                                <h3 className="text-xl font-bold leading-6 text-gray-900 font-serif group-hover:text-primary transition-colors">
+                                <h3 className={`font-bold leading-6 text-gray-900 font-serif group-hover:text-primary transition-colors ${index === 0 ? 'text-3xl mb-4' : 'text-xl'}`}>
                                     <Link href={`/cursos/${course.slug}`}>
                                         <span className="absolute inset-0" />
                                         {course.title}
                                     </Link>
                                 </h3>
-                                <p className="mt-4 line-clamp-3 text-sm leading-6 text-gray-600">
+                                <p className={`mt-4 text-sm leading-6 text-gray-600 ${index === 0 ? 'text-lg line-clamp-none' : 'line-clamp-3'}`}>
                                     {course.description}
                                 </p>
 
                                 <div className="mt-8 flex items-center justify-between border-t pt-4 w-full">
-                                    <span className="text-lg font-bold text-primary">{course.price}</span>
+                                    <span className={`font-bold text-primary ${index === 0 ? 'text-2xl' : 'text-lg'}`}>{course.price}</span>
                                     <Button size="sm" variant="secondary" className="group-hover:bg-secondary group-hover:text-white transition-colors">Ver Detalhes</Button>
                                 </div>
                             </div>

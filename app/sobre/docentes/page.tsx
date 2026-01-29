@@ -2,7 +2,8 @@ import { PageHeader } from "@/components/ui/page-header";
 import { Mail } from "lucide-react";
 
 // Mock Data
-const team = [
+// Mock Data
+const semipresencialTeam = [
     {
         name: "Prof. Rômulo Monteiro",
         role: "Teologia Bíblica (AT/NT), Sistemas Teológicos",
@@ -33,7 +34,22 @@ const team = [
         imageUrl: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
         bio: "@arnonigustavo",
     },
-]
+];
+
+const guestTeam = [
+    {
+        name: "Prof. Dr. Jonas Madureira",
+        role: "Teologia Filosófica",
+        imageUrl: "https://images.unsplash.com/photo-1560250097-9b93dbddb426?q=80&w=2670&auto=format&fit=crop", // Placeholder
+        bio: "Pastor e Teólogo (Convidado)",
+    },
+    {
+        name: "Prof. Franklin Ferreira",
+        role: "Teologia Histórica",
+        imageUrl: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=2670&auto=format&fit=crop", // Placeholder
+        bio: "Teólogo e Escritor (Convidado)",
+    },
+];
 
 export default function DocentesPage() {
     return (
@@ -44,20 +60,45 @@ export default function DocentesPage() {
             />
 
             <div className="mx-auto max-w-7xl px-6 lg:px-8 py-24">
-                <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-                    {team.map((person) => (
-                        <li key={person.name}>
-                            <div className="flex items-start gap-x-6">
-                                <img className="h-24 w-24 rounded-full bg-gray-50 object-cover ring-2 ring-primary/10" src={person.imageUrl} alt="" />
-                                <div>
-                                    <h3 className="text-base font-bold leading-7 tracking-tight text-gray-900">{person.name}</h3>
-                                    <p className="text-sm font-semibold leading-6 text-secondary">{person.role}</p>
-                                    <p className="mt-2 text-sm leading-6 text-gray-600">{person.bio}</p>
+                <div className="mb-16">
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-serif mb-12 border-b pb-4">
+                        Professores do Semipresencial
+                    </h2>
+                    <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+                        {semipresencialTeam.map((person) => (
+                            <li key={person.name}>
+                                <div className="flex items-start gap-x-6 group">
+                                    <img className="h-24 w-24 rounded-full bg-gray-50 object-cover ring-2 ring-primary/10 grayscale group-hover:grayscale-0 transition-all duration-300" src={person.imageUrl} alt="" />
+                                    <div>
+                                        <h3 className="text-base font-bold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                                        <p className="text-sm font-semibold leading-6 text-secondary">{person.role}</p>
+                                        <p className="mt-2 text-sm leading-6 text-gray-600 opacity-60 group-hover:opacity-100 transition-opacity">{person.bio}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
+                <div>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-serif mb-12 border-b pb-4">
+                        Professores Convidados
+                    </h2>
+                    <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
+                        {guestTeam.map((person) => (
+                            <li key={person.name}>
+                                <div className="flex items-start gap-x-6 group">
+                                    <img className="h-24 w-24 rounded-full bg-gray-50 object-cover ring-2 ring-primary/10 grayscale group-hover:grayscale-0 transition-all duration-300" src={person.imageUrl} alt="" />
+                                    <div>
+                                        <h3 className="text-base font-bold leading-7 tracking-tight text-gray-900">{person.name}</h3>
+                                        <p className="text-sm font-semibold leading-6 text-secondary">{person.role}</p>
+                                        <p className="mt-2 text-sm leading-6 text-gray-600 opacity-60 group-hover:opacity-100 transition-opacity">{person.bio}</p>
+                                    </div>
+                                </div>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </div>
         </div>
     );

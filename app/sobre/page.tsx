@@ -9,7 +9,7 @@ export default function AboutPage() {
         <div className="bg-white">
             <PageHeader
                 title="Quem Somos"
-                subtitle="Uma instituição comprometida com a glória de Deus e a edificação da Igreja através do ensino teológico de excelência."
+                subtitle="Teologia conectada com a tradição."
                 backgroundImage="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2670&auto=format&fit=crop"
             />
 

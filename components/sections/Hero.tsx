@@ -24,7 +24,7 @@ export function Hero() {
                 <div className="mx-auto max-w-3xl text-center">
                     <div className="overflow-hidden">
                         <TextReveal
-                            text="Instituto de Teologia, Cultura e Vida Cristã"
+                            text="Teologia Conectada com a Tradição"
                             className="text-4xl font-bold tracking-tight text-white sm:text-6xl font-serif block mb-6"
                         />
                     </div>
@@ -36,15 +36,15 @@ export function Hero() {
                     </FadeIn>
 
                     <FadeIn delay={1.2} direction="up">
-                        <div className="mt-10 flex items-center justify-center gap-x-6">
-                            <Button asChild size="lg" className="bg-accent text-white hover:bg-accent/90 shadow-lg hover:glimmer transition-all duration-300 transform hover:-translate-y-1">
-                                <Link href="/cursos">
-                                    Conheça nossos Cursos
+                        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
+                            <Button asChild size="lg" className="w-full sm:w-auto bg-accent text-white hover:bg-accent/90 shadow-lg hover:glimmer transition-all duration-300 transform hover:-translate-y-1">
+                                <Link href="/cursos/semipresencial">
+                                    Conheça o Bacharelado
                                 </Link>
                             </Button>
-                            <Button asChild variant="outline" size="lg" className="text-white border-white/40 bg-white/5 hover:bg-white/20 hover:text-white backdrop-blur transition-all duration-300">
-                                <Link href="/contato" className="gap-2 flex items-center">
-                                    Agendar Visita <ArrowRight className="h-4 w-4" />
+                            <Button variant="outline" size="lg" className="w-full sm:w-auto text-white border-white/40 bg-white/5 hover:bg-white/20 hover:text-white backdrop-blur transition-all duration-300 gap-2 group">
+                                <Link href="#" className="flex items-center gap-2">
+                                    Assistir Vídeo Institucional <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                                 </Link>
                             </Button>
                         </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BookOpen, MapPin, Mail, Phone, Facebook, Instagram, Youtube } from "lucide-react";
+import { BookOpen, MapPin, Mail, Phone, Facebook, Instagram, Youtube, Twitter } from "lucide-react";
 
 const footerNavigation = {
     solutions: [
@@ -40,6 +40,11 @@ const footerNavigation = {
             href: "#",
             icon: Youtube,
         },
+        {
+            name: "X (Twitter)",
+            href: "#",
+            icon: Twitter,
+        },
     ],
 };
 
@@ -59,7 +64,7 @@ export function Footer() {
                             </span>
                         </Link>
                         <p className="text-sm leading-6 text-gray-300">
-                            Formando líderes para a igreja com excelência acadêmica e fidelidade bíblica no coração da Amazônia.
+                            Fidelidade Bíblica e Excelência Acadêmica no ensino da Teologia.
                         </p>
                         <div className="flex space-x-6">
                             {footerNavigation.social.map((item) => (
@@ -127,9 +132,12 @@ export function Footer() {
                         </div>
                     </div>
                 </div>
-                <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24">
+                <div className="mt-16 border-t border-white/10 pt-8 sm:mt-20 lg:mt-24 flex flex-col md:flex-row justify-between items-center gap-4">
                     <p className="text-xs leading-5 text-gray-400">
                         &copy; {new Date().getFullYear()} Seminário Theocidade. Todos os direitos reservados.
+                    </p>
+                    <p className="text-xs leading-5 text-gray-500">
+                        Monitores: Kalil, Bruno
                     </p>
                 </div>
             </div>
