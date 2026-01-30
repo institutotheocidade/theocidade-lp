@@ -133,9 +133,9 @@ export function Footer() {
                     <p className="text-xs leading-5 text-gray-400">
                         &copy; {new Date().getFullYear()} Seminário Theocidade. Todos os direitos reservados.
                     </p>
-                    <p className="text-xs leading-5 text-gray-500">
-                        Monitores: Kalil, Bruno
-                    </p>
+                    <div className="flex gap-4">
+                        {/* Monitors Removed */}
+                    </div>
                 </div>
             </div>
         </footer>

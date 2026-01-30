@@ -9,7 +9,7 @@ export function Hero() {
         <div className="relative isolate overflow-hidden bg-gray-900 h-[90vh] flex items-center justify-center">
             {/* Background Image / Pattern */}
             <div
-                className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30 bg-[url('https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?q=80&w=2574&auto=format&fit=crop')] bg-cover bg-center animate-ken-burns"
+                className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 bg-[url('/sacred-art-hero.png')] bg-cover bg-center animate-ken-burns"
                 style={{ animation: 'ken-burns 20s infinite alternate ease-in-out' }} // Custom mild zoom effect
                 aria-hidden="true"
             />
