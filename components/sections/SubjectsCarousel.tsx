@@ -1,3 +1,5 @@
+"use client";
+
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import { BookOpen, Scroll, LandPlot, Languages, Brain, Users, Mic2 } from 'lucide-react';
