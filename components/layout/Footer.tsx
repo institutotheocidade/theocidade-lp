@@ -58,7 +58,7 @@ export function Footer() {
                 <div className="xl:grid xl:grid-cols-3 xl:gap-8">
                     <div className="space-y-8">
                         <Link href="/" className="flex items-center gap-2">
-                            <img src="/logo-full.png" alt="Theocidade" className="h-12 w-auto brightness-0 invert" />
+                            <img src="/logo-full.png" alt="Theocidade" className="h-20 w-auto brightness-0 invert" />
                         </Link>
                         <p className="text-sm leading-6 text-gray-300">
                             Fidelidade Bíblica e Excelência Acadêmica no ensino da Teologia.

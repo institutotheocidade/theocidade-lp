@@ -28,8 +28,9 @@ export function Header() {
                         {/* <span className="font-serif text-2xl font-bold text-primary tracking-tight">
                             Theocidade
                         </span> */}
-                        <img src="/logo-full.png" alt="Theocidade" className="h-10 w-auto" />
-                    </Link>
+                        <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
+                            <img src="/logo-full.png" alt="Theocidade" className="h-16 w-auto" />
+                        </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button
