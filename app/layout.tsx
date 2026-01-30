@@ -18,6 +18,11 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   title: "Theocidade - Seminário Teológico em Manaus",
   description: "Formação teológica sólida e confessional em Manaus. Cursos de Bacharelado, Pós-graduação e Livres.",
+  icons: {
+    icon: "/logo-icon.png",
+    shortcut: "/logo-icon.png",
+    apple: "/logo-icon.png",
+  },
 };
 
 export default function RootLayout({
