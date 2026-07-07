@@ -9,7 +9,7 @@ const footerNavigation = {
         { name: "EAD", href: "/ead" },
     ],
     support: [
-        { name: "Portal do Aluno", href: "https://portal.theocidade.com" },
+        { name: "Portal do Aluno", href: "https://ava.institutotheocidade.com/" },
         { name: "Calendário Acadêmico", href: "/calendario" },
         { name: "Biblioteca", href: "/biblioteca" },
         { name: "Fale Conosco", href: "/contato" },
