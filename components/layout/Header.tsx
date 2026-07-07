@@ -54,7 +54,7 @@ export function Header() {
                 </div>
                 <div className="hidden lg:flex lg:flex-1 lg:justify-end gap-4">
                     <Link
-                        href="https://ava.institutotheocidade.com/"
+                        href="https://ava.institutotheocidade.com/login"
                         className="text-sm font-semibold leading-6 text-primary flex items-center gap-1 border border-primary px-4 py-2 rounded-md hover:bg-primary hover:text-white transition-all"
                     >
                         <GraduationCap className="h-4 w-4" />
@@ -100,7 +100,7 @@ export function Header() {
                             </div>
                             <div className="py-6">
                                 <Link
-                                    href="https://ava.institutotheocidade.com/"
+                                    href="https://ava.institutotheocidade.com/login"
                                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50 bg-gray-50"
                                 >
                                     Portal do Aluno
